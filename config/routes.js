@@ -1,7 +1,7 @@
 module.exports.routes = {
 
-  // HTML Views
-  '/': { view: 'homepage' },
+
+  '/': { view: 'user/signup' },
   'get /login': { view: 'user/login' },
   'get /signup': { view: 'user/signup' },
   '/welcome': { view: 'user/welcome' },

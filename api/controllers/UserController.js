@@ -1,22 +1,15 @@
-/**
- * UserController
- *
- * @description :: Server-side logic for managing users
- * @help        :: See http://links.sailsjs.org/docs/controllers
- */
+
 
 module.exports = {
 
-  /**
-   * `UserController.login()`
-   */
+
   login: function (req, res) {
 
     // See `api/responses/login.js`
     return res.login({
       email: req.param('email'),
       password: req.param('password'),
-      successRedirect: '/',
+      successRedirect: '/welcome',
       invalidRedirect: '/login'
     });
   },
@@ -38,7 +31,7 @@ module.exports = {
       return res.ok('Logged out successfully!');
     }
 
-    // Otherwise if this is an HTML-wanting browser, do a redirect.
+
     return res.redirect('/');
   },
 
